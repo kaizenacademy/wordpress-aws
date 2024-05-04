@@ -1,0 +1,21 @@
+- name: Start service mariadb, if not started
+  service:
+    name: mariadb
+    state: started
+    enabled: yes
+
+- name: Create a new database with name 'bobdata'
+  community.mysql.mysql_db:
+    login_user: root
+    login_password: ""
+    name: bobdata1
+    state: present
+
+- name: Create database user with name 'bob' and password '12345' with all database privileges
+  community.mysql.mysql_user:
+    login_user: root
+    login_password: new_password
+    name: bob1
+    password: 12345
+    priv: '*.*:ALL'
+    state: present
