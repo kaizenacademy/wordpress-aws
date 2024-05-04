@@ -1,1 +1,1 @@
-wordpress ansible_host=18.223.43.172 ansible_python_interpreter=/usr/bin/python3.9
+wordpress ansible_host=3.149.248.123 ansible_python_interpreter=/usr/bin/python3.9

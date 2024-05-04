@@ -4,18 +4,19 @@
     state: started
     enabled: yes
 
-- name: Create a new database with name 'bobdata'
+- name: Create a new database with name 'wordpress'
   community.mysql.mysql_db:
-    login_user: root
-    login_password: ""
-    name: bobdata1
+    login_user: ansible
+    login_password: hello
+    name: wordpress
     state: present
 
-- name: Create database user with name 'bob' and password '12345' with all database privileges
+- name: Create database user with name 'kaizen' and password 'kaizen123' with all database privileges
   community.mysql.mysql_user:
-    login_user: root
-    login_password: new_password
-    name: bob1
-    password: 12345
+    login_user: ansible
+    login_password: hello
+    name: kaizen
+    password: kaizen123
     priv: '*.*:ALL'
     state: present
+    column_case_sensitive: false

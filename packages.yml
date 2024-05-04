@@ -9,4 +9,10 @@
       - php-json
       - php
       - php-devel
+      - python
+      - python-pip
     state: latest
+
+- name: Install pymysql
+  ansible.builtin.pip:
+    name: pymysql
